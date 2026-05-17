@@ -2,7 +2,7 @@
 layout: default
 title: Bubble Sort
 parent: Sorting Algorithms
-nav_order: 1
+nav_order: 3
 ---
 
 # **Bubble Sort**

@@ -2,7 +2,7 @@
 layout: default
 title: Merge Sort
 parent: Sorting Algorithms
-nav_order: 1
+nav_order: 2
 ---
 
 # **Merge Sort**
