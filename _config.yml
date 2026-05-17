@@ -25,3 +25,6 @@ back_to_top_text: "Back to top"
 
 plugins:
   - jekyll-last-modified-at
+
+last-modified-at:
+  date-format: '%d-%b-%y'
