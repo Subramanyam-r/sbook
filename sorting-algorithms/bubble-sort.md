@@ -5,7 +5,7 @@ parent: Sorting Algorithms
 nav_order: 3
 ---
 
-# **Bubble Sort**
+# **Bubble Sort** <span class="label label-blue fw-500">Concept</span>
 
 ### Description
 

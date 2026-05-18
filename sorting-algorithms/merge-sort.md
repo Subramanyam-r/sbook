@@ -5,7 +5,7 @@ parent: Sorting Algorithms
 nav_order: 2
 ---
 
-# **Merge Sort**
+# **Merge Sort** <span class="label label-blue fw-500">Concept</span>
 
 ### Description
 

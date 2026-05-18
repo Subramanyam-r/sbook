@@ -5,7 +5,7 @@ parent: Data Structures
 nav_order: 1
 ---
 
-# **Heaps**
+# **Heaps** <span class="label label-blue fw-500">Concept</span>
 
 ## Description
 

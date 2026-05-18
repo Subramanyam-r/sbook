@@ -1,6 +1,7 @@
 title: DSA Docs
 description: Documentation site for my DSA Learnings
 theme: just-the-docs
+timezone: Asia/Kolkata
 
 url: https://dsa.subramanyam.dev
 favicon: 
@@ -12,7 +13,7 @@ gh_edit_link_text: "Edit this page on GitHub"
 gh_edit_view_mode: "tree"
 
 last_edit_timestamp: true
-last_edit_time_format: "%b %d, %Y"
+last_edit_time_format: "%B %d, %Y"
 
 nav_enabled: true
 
