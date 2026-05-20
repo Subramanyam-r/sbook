@@ -5,9 +5,33 @@ nav_exclude: true
 search_enabled: false
 ---
 
+<style>
+  /* Desktop wrapper inherits standard flex rules */
+  .blog-card-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* Forces left and right boxes to match height */
+    gap: 1.5rem;
+  }
+
+  /* Responsive breakpoints for smaller mobile viewports */
+  @media (max-width: 600px) {
+    .blog-card-container {
+      /* Flip order so image sits neatly on top of the text */
+      flex-direction: column-reverse !important;
+      gap: 1rem !important;
+    }
+    .blog-cover-wrapper {
+      /* Override fixed layout constraints to fill the horizontal row */
+      width: 100% !important;
+      height: 180px !important;
+    }
+  }
+</style>
+
 # Blogs
 
-<div class="blog-timeline" style="position: relative; margin: 3rem 0; padding-left: 2rem; border-left: 2px solid var(--border-color);">
+<div class="blog-timeline" style="position: relative; margin: 3rem 0; border-left: 2px solid var(--border-color);">
   {% for post in site.posts %}
     <!-- Calculate Reading Time -->
     {% assign words = post.content | strip_html | number_of_words %}
@@ -35,18 +59,14 @@ search_enabled: false
 
       <!-- Content Container with Click Listener & Hover Highlight -->
       <div
+        class="blog-card-container"
         onclick="window.location='{{ post.url | relative_url }}';"
         style="
-          display: flex;
-          justify-content: space-between;
-          align-items: flex-start;
-          gap: 1.5rem;
           cursor: pointer;
           padding: 0.75rem 1rem;
           margin: -0.75rem -1rem;
           border-radius: 6px;
           transition: background-color 0.2s ease, box-shadow 0.2s ease;
-          flex-wrap: wrap-reverse;
         "
         onmouseover="
           this.style.backgroundColor='var(--feedback-info-background-color, rgba(0, 0, 0, 0.02))';
@@ -58,7 +78,7 @@ search_enabled: false
         "
       >
         <!-- Left Side: Text Details -->
-        <div style="flex: 1; min-width: 280px; display: flex; flex-direction: column; gap: 0.25rem;">
+        <div style="flex: 1; min-width: 280px; display: flex; flex-direction: column; justify-content: center; gap: 0.25rem;">
 
           <!-- Metadata Row (Date & Reading Time) -->
           <div style="display: flex; gap: 1rem; align-items: center; color: var(--text-color-light); font-size: 0.85rem; font-weight: bold; letter-spacing: 0.5px; text-transform: uppercase;">
@@ -88,9 +108,9 @@ search_enabled: false
           {% endif %}
         </div>
 
-        <!-- Right Side: Cover Image Thumbnail -->
+        <!-- Right Side: Cover Image Thumbnail (Occupies full height/width block) -->
         {% if post.cover_image %}
-        <div style="width: 140px; height: 90px; flex-shrink: 0; border-radius: 4px; overflow: hidden; border: 1px solid var(--border-color);">
+        <div class="blog-cover-wrapper" style="width: 180px; min-height: 110px; flex-shrink: 0; border-radius: 4px; overflow: hidden; border: 1px solid var(--border-color);">
           <img src="{{ post.cover_image | relative_url }}" alt="{{ post.title }}" style="width: 100%; height: 100%; object-fit: cover;">
         </div>
         {% endif %}

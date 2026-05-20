@@ -2,8 +2,50 @@
 layout: minimal
 ---
 
-{% if page.cover_image %}
+<!-- Back to Blog Button -->
+<div style="margin-bottom: 1.5rem">
+    <a
+        href="{{ '/blog' | relative_url }}"
+        style="
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            text-decoration: none;
+            color: var(--text-color-light);
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition:
+                color 0.2s ease,
+                transform 0.2s ease;
+        "
+        onmouseover="
+            this.style.color = 'var(--link-color)';
+            this.style.transform = 'translateX(-2px)';
+        "
+        onmouseout="
+            this.style.color = 'var(--text-color-light)';
+            this.style.transform = 'translateX(0)';
+        "
+    >
+        <svg
+            viewBox="0 0 24 24"
+            width="16"
+            height="16"
+            stroke="currentColor"
+            stroke-width="2.5"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            style="transform: translateY(-0.5px)"
+        >
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        Back to Blog
+    </a>
+</div>
 
+{% if page.cover_image %}
 <div style="width: 100%; max-height: 400px; margin-bottom: 2rem; border-radius: 6px; overflow: hidden; border: 1px solid var(--border-color)">
     <img src="{{ page.cover_image | relative_url }}" alt="{{ page.title }}" style="width: 100%; height: auto; max-height: 400px; object-fit: cover" />
 </div>
