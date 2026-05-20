@@ -4,13 +4,13 @@ title: Home
 nav_order: 1
 ---
 
-# Welcome to DSA Docs
 {: .fs-9 }
 
-A Comprehensive Notes of my DSA Learnings.
+# Software Book
+
 {: .fs-6 .fw-300 }
 
-[View on GitHub](https://github.com/Subramanyam-r/dsa-docs){: .btn .fs-5 .mb-4 .mb-md-0 }
+A Documentation Medium for my Software Engineering learnings.
 
 ---
 
@@ -25,8 +25,9 @@ A Comprehensive Notes of my DSA Learnings.
 
 {% assign child_pages = site.html_pages | where: "parent", parent.title | sort: "nav_order" %}
 {% for child in child_pages %}
-* [{{ child.title }}]({{ child.url | relative_url }})
-{% endfor %}
+
+- [{{ child.title }}]({{ child.url | relative_url }})
+  {% endfor %}
 
 {% endfor %}
 
@@ -34,5 +35,5 @@ A Comprehensive Notes of my DSA Learnings.
 
 ## How to Contribute or Edit
 
-Spot a typo or want to add a better code example? 
+Spot a typo or want to add a better code example?
 Every page on this site has an **"Edit this page on GitHub"** link at the bottom. Feel free to click it, make your changes in the GitHub web editor, and submit a pull request!

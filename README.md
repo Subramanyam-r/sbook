@@ -1,3 +1,3 @@
-# DSA Docs
+# Software Book
 
-## View Here: https://dsa.subramanyam.dev
+## View Here: https://sbook.subramanyam.dev
