@@ -6,6 +6,12 @@ gem "jekyll", "~> 4.4.1" # installed by `gem jekyll`
 gem "just-the-docs", "0.12.0" # pinned to the current release
 # gem "just-the-docs"        # always download the latest release
 
+gem "webrick"
+gem "logger"
+gem "csv"
+
+gem "tzinfo-data"
+
 group :jekyll_plugins do
   gem "jekyll-last-modified-at"
 end

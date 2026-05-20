@@ -4,7 +4,7 @@ theme: just-the-docs
 timezone: Asia/Kolkata
 
 url: https://dsa.subramanyam.dev
-favicon: 
+favicon:
 
 gh_edit_repository: "https://github.com/Subramanyam-r/dsa-docs"
 gh_edit_branch: "main"
@@ -19,13 +19,28 @@ nav_enabled: true
 
 aux_links_new_tab: true
 aux_links:
-  "About": "https://subramanyam.dev"
+    "About": "https://subramanyam.dev"
 
 back_to_top: true
 back_to_top_text: "Back to top"
 
 plugins:
-  - jekyll-last-modified-at
+    - jekyll-last-modified-at
 
 last-modified-at:
-  date-format: '%d-%b-%y'
+    date-format: "%d-%b-%y"
+
+callouts:
+    highlight:
+        color: yellow
+    important:
+        title: Important
+        color: blue
+    new:
+        title: New
+        color: green
+    note:
+        color: purple
+    warning:
+        title: Warning
+        color: red
