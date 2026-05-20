@@ -20,6 +20,8 @@ nav_enabled: true
 aux_links_new_tab: true
 aux_links:
     "About": "https://subramanyam.dev"
+    "Home": "/"
+    "Blog": "/blog"
 
 back_to_top: true
 back_to_top_text: "Back to top"
@@ -44,3 +46,12 @@ callouts:
     warning:
         title: Warning
         color: red
+
+defaults:
+    - scope:
+          path: ""
+          type: "posts"
+      values:
+          layout: "post"
+          nav_exclude: true
+          search_enabled: false

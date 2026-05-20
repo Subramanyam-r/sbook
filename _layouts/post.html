@@ -1,0 +1,10 @@
+---
+layout: minimal
+---
+
+{% if page.cover_image %}
+
+<div style="width: 100%; max-height: 400px; margin-bottom: 2rem; border-radius: 6px; overflow: hidden; border: 1px solid var(--border-color)">
+    <img src="{{ page.cover_image | relative_url }}" alt="{{ page.title }}" style="width: 100%; height: auto; max-height: 400px; object-fit: cover" />
+</div>
+{% endif %} {{ content }}
