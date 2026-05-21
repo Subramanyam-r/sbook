@@ -54,4 +54,5 @@ defaults:
       values:
           layout: "post"
           nav_exclude: true
-          search_enabled: false
+
+permalink: /blog/:title/

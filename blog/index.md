@@ -2,7 +2,7 @@
 layout: minimal
 title: Blog
 nav_exclude: true
-search_enabled: false
+search_enabled: true
 ---
 
 <style>
@@ -116,7 +116,7 @@ search_enabled: false
         {% endif %}
 
       </div>
-
+    <hr>
     </div>
 
 {% endfor %}
