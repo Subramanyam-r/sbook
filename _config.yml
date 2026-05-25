@@ -2,6 +2,7 @@ title: Software Book
 description: A Documentation medium for my Software Engineering learnings.
 theme: just-the-docs
 timezone: Asia/Kolkata
+color_scheme: light
 
 url: https://sbook.subramanyam.dev
 favicon:
